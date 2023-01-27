@@ -2,7 +2,7 @@
 #ifndef CC_INTEGERS_DEFINED
 #define CC_INTEGERS_DEFINED
 
- #if defined(CC_USE_C99_INTEGERS)
+ #ifdef CC_USE_C99_INTEGERS
    /* Use C99's/C++11's better integer types if available. */
   #include <inttypes.h>
   #include <stdint.h>
