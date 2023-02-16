@@ -179,6 +179,14 @@
 #define CC_SIGN_EXTEND_ULONG(bit_index, value) CC_SIGN_EXTEND(unsigned long, bit_index, value)
 #endif
 
+#ifndef CC_DEGREE_TO_RADIAN
+#define CC_DEGREE_TO_RADIAN(degree) ((degree) * (CC_PI / 180.0))
+#endif
+
+#ifndef CC_STRUCT_POINTER_FROM_MEMBER_POINTER
+#define CC_STRUCT_POINTER_FROM_MEMBER_POINTER(type, member, entry) (type*)(((char*)(entry)) - offsetof(type, member))
+#endif
+
 #ifndef CC_ATTRIBUTE_PRINTF
  /* GCC 3.2 is the earliest version of GCC of which I can find proof of supporting this. */
  #if defined(__GNUC__) && defined(__GNUC_MINOR__) && (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2))
