@@ -184,7 +184,7 @@
 #endif
 
 #ifndef CC_STRUCT_POINTER_FROM_MEMBER_POINTER
-#define CC_STRUCT_POINTER_FROM_MEMBER_POINTER(type, member, entry) (type*)(((char*)(entry)) - offsetof(type, member))
+#define CC_STRUCT_POINTER_FROM_MEMBER_POINTER(type, member, entry) ((type*)(((char*)(entry)) - offsetof(type, member)))
 #endif
 
 #ifndef CC_ATTRIBUTE_PRINTF
