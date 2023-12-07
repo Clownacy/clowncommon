@@ -156,7 +156,7 @@
 #endif
 
 #ifndef CC_COUNT_OF
-#define CC_COUNT_OF(array) (sizeof(array) / sizeof(*(array)))
+#define CC_COUNT_OF(array) (sizeof(array) / sizeof((array)[0]))
 #endif
 
 #ifndef CC_DIVIDE_ROUND
