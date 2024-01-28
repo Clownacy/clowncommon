@@ -183,6 +183,10 @@
 #define CC_DEGREE_TO_RADIAN(degree) ((degree) * (CC_PI / 180.0))
 #endif
 
+#ifndef CC_RADIAN_TO_DEGREE
+#define CC_RADIAN_TO_DEGREE(degree) ((degree) * (180.0 / CC_PI))
+#endif
+
 #ifndef CC_STRUCT_POINTER_FROM_MEMBER_POINTER
 #define CC_STRUCT_POINTER_FROM_MEMBER_POINTER(type, member, entry) ((type*)(((char*)(entry)) - offsetof(type, member)))
 #endif
