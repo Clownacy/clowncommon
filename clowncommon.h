@@ -205,6 +205,17 @@
 #define CC_STRINGIFY2(STRING) #STRING
 #endif
 
+#ifdef __cplusplus
+ #ifndef CC_CPLUSPLUS
+  /* MSVC is FUCKING SHIT, setting '__cplusplus' to the wrong value in a direct violation of the C++ standard. */
+  #ifdef _MSVC_LANG
+   #define CC_CPLUSPLUS _MSVC_LANG
+  #else
+   #define CC_CPLUSPLUS __cplusplus
+  #endif
+ #endif
+#endif
+
 /* Common constants. */
 #ifndef CC_PI
 #define CC_PI 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
