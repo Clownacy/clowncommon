@@ -216,6 +216,29 @@
  #endif
 #endif
 
+#ifndef CC_UNREACHABLE
+ #ifdef CC_CPLUSPLUS
+  #include <utility>
+ #endif
+
+ #if defined(__cpp_lib_unreachable) && __cpp_lib_unreachable >= 202202L
+  /* Standard C++23. */
+  #define CC_UNREACHABLE std::unreachable()
+ #elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202311L
+  /* Standard C23. */
+  #include <stddef.h>
+  #define CC_UNREACHABLE unreachable()
+ #elif defined(_MSC_VER) && _MSC_VER >= 1200 /* VC 6.0 is the oldest version that I have available to test. */
+  /* MSVC. */
+  #define CC_UNREACHABLE __assume(0)
+ #elif defined(__GNUC__) && defined(__GNUC_MINOR__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 5))
+  /* GCC. */
+  #define CC_UNREACHABLE __builtin_unreachable()
+ #else
+  #define CC_UNREACHABLE
+ #endif
+#endif
+
 /* Common constants. */
 #ifndef CC_PI
 #define CC_PI 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
