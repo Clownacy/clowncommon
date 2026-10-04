@@ -239,6 +239,29 @@
  #endif
 #endif
 
+#if defined(CC_CPLUSPLUS) && CC_CPLUSPLUS >= 201703L
+ #ifndef CC_VISIT_HELPER
+ #define CC_VISIT_HELPER
+  template<typename... Ts>
+  struct CC_VisitHelper : Ts... { using Ts::operator()...; };
+
+  /* Deduction guide. */
+  template<typename... Ts>
+  CC_VisitHelper(Ts...) -> CC_VisitHelper<Ts...>;
+ #endif
+
+ #ifndef CC_VARIANT_HOLDS_ANY_OF
+ #define CC_VARIANT_HOLDS_ANY_OF
+  #include <variant>
+
+  template<typename... Alts, typename... Ts>
+  constexpr bool CC_VariantHoldsAnyOf(const std::variant<Ts...> &variant) noexcept
+  {
+   return (std::holds_alternative<Alts>(variant) || ...);
+  }
+ #endif
+#endif
+
 /* Common constants. */
 #ifndef CC_PI
 #define CC_PI 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679
