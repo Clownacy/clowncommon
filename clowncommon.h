@@ -235,7 +235,9 @@
   /* GCC. */
   #define CC_UNREACHABLE __builtin_unreachable()
  #else
-  #define CC_UNREACHABLE
+  /* Assert fallback; will resolve to nothing in release builds, but throw an error in debug builds. Better than nothing. */
+  #include <assert.h>
+  #define CC_UNREACHABLE assert(cc_false)
  #endif
 #endif
 
