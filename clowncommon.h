@@ -2,130 +2,130 @@
 #ifndef CC_INTEGERS_DEFINED
 #define CC_INTEGERS_DEFINED
 
- #ifdef CC_USE_C99_INTEGERS
-   /* Use C99's/C++11's better integer types if available. */
-  #include <inttypes.h>
-  #include <stdint.h>
+	#ifdef CC_USE_C99_INTEGERS
+		/* Use C99's/C++11's better integer types if available. */
+		#include <inttypes.h>
+		#include <stdint.h>
 
-  typedef int_least8_t cc_s8l;
-  typedef int_least16_t cc_s16l;
-  typedef int_least32_t cc_s32l;
+		typedef int_least8_t cc_s8l;
+		typedef int_least16_t cc_s16l;
+		typedef int_least32_t cc_s32l;
 
-  typedef uint_least8_t cc_u8l;
-  typedef uint_least16_t cc_u16l;
-  typedef uint_least32_t cc_u32l;
+		typedef uint_least8_t cc_u8l;
+		typedef uint_least16_t cc_u16l;
+		typedef uint_least32_t cc_u32l;
 
-  typedef int_fast8_t cc_s8f;
-  typedef int_fast16_t cc_s16f;
-  typedef int_fast32_t cc_s32f;
+		typedef int_fast8_t cc_s8f;
+		typedef int_fast16_t cc_s16f;
+		typedef int_fast32_t cc_s32f;
 
-  typedef uint_fast8_t cc_u8f;
-  typedef uint_fast16_t cc_u16f;
-  typedef uint_fast32_t cc_u32f;
+		typedef uint_fast8_t cc_u8f;
+		typedef uint_fast16_t cc_u16f;
+		typedef uint_fast32_t cc_u32f;
 
-  #define CC_PRIdLEAST8 PRIdLEAST8
-  #define CC_PRIiLEAST8 PRIiLEAST8
-  #define CC_PRIuLEAST8 PRIuLEAST8
-  #define CC_PRIoLEAST8 PRIoLEAST8
-  #define CC_PRIxLEAST8 PRIxLEAST8
-  #define CC_PRIXLEAST8 PRIXLEAST8
+		#define CC_PRIdLEAST8 PRIdLEAST8
+		#define CC_PRIiLEAST8 PRIiLEAST8
+		#define CC_PRIuLEAST8 PRIuLEAST8
+		#define CC_PRIoLEAST8 PRIoLEAST8
+		#define CC_PRIxLEAST8 PRIxLEAST8
+		#define CC_PRIXLEAST8 PRIXLEAST8
 
-  #define CC_PRIdLEAST16 PRIdLEAST16
-  #define CC_PRIiLEAST16 PRIiLEAST16
-  #define CC_PRIuLEAST16 PRIuLEAST16
-  #define CC_PRIoLEAST16 PRIoLEAST16
-  #define CC_PRIxLEAST16 PRIxLEAST16
-  #define CC_PRIXLEAST16 PRIXLEAST16
+		#define CC_PRIdLEAST16 PRIdLEAST16
+		#define CC_PRIiLEAST16 PRIiLEAST16
+		#define CC_PRIuLEAST16 PRIuLEAST16
+		#define CC_PRIoLEAST16 PRIoLEAST16
+		#define CC_PRIxLEAST16 PRIxLEAST16
+		#define CC_PRIXLEAST16 PRIXLEAST16
 
-  #define CC_PRIdLEAST32 PRIdLEAST32
-  #define CC_PRIiLEAST32 PRIiLEAST32
-  #define CC_PRIuLEAST32 PRIuLEAST32
-  #define CC_PRIoLEAST32 PRIoLEAST32
-  #define CC_PRIxLEAST32 PRIxLEAST32
-  #define CC_PRIXLEAST32 PRIXLEAST32
+		#define CC_PRIdLEAST32 PRIdLEAST32
+		#define CC_PRIiLEAST32 PRIiLEAST32
+		#define CC_PRIuLEAST32 PRIuLEAST32
+		#define CC_PRIoLEAST32 PRIoLEAST32
+		#define CC_PRIxLEAST32 PRIxLEAST32
+		#define CC_PRIXLEAST32 PRIXLEAST32
 
-  #define CC_PRIdFAST8 PRIdFAST8
-  #define CC_PRIiFAST8 PRIiFAST8
-  #define CC_PRIuFAST8 PRIuFAST8
-  #define CC_PRIoFAST8 PRIoFAST8
-  #define CC_PRIxFAST8 PRIxFAST8
-  #define CC_PRIXFAST8 PRIXFAST8
+		#define CC_PRIdFAST8 PRIdFAST8
+		#define CC_PRIiFAST8 PRIiFAST8
+		#define CC_PRIuFAST8 PRIuFAST8
+		#define CC_PRIoFAST8 PRIoFAST8
+		#define CC_PRIxFAST8 PRIxFAST8
+		#define CC_PRIXFAST8 PRIXFAST8
 
-  #define CC_PRIdFAST16 PRIdFAST16
-  #define CC_PRIiFAST16 PRIiFAST16
-  #define CC_PRIuFAST16 PRIuFAST16
-  #define CC_PRIoFAST16 PRIoFAST16
-  #define CC_PRIxFAST16 PRIxFAST16
-  #define CC_PRIXFAST16 PRIXFAST16
+		#define CC_PRIdFAST16 PRIdFAST16
+		#define CC_PRIiFAST16 PRIiFAST16
+		#define CC_PRIuFAST16 PRIuFAST16
+		#define CC_PRIoFAST16 PRIoFAST16
+		#define CC_PRIxFAST16 PRIxFAST16
+		#define CC_PRIXFAST16 PRIXFAST16
 
-  #define CC_PRIdFAST32 PRIdFAST32
-  #define CC_PRIiFAST32 PRIiFAST32
-  #define CC_PRIuFAST32 PRIuFAST32
-  #define CC_PRIoFAST32 PRIoFAST32
-  #define CC_PRIxFAST32 PRIxFAST32
-  #define CC_PRIXFAST32 PRIXFAST32
+		#define CC_PRIdFAST32 PRIdFAST32
+		#define CC_PRIiFAST32 PRIiFAST32
+		#define CC_PRIuFAST32 PRIuFAST32
+		#define CC_PRIoFAST32 PRIoFAST32
+		#define CC_PRIxFAST32 PRIxFAST32
+		#define CC_PRIXFAST32 PRIXFAST32
 
- #else /* CC_USE_C99_INTEGERS */
+	#else /* CC_USE_C99_INTEGERS */
 
-   /* Fall back on C89's/C++98's dumb types. */
-  typedef signed char cc_s8l;
-  typedef signed short cc_s16l;
-  typedef signed long cc_s32l;
+		/* Fall back on C89's/C++98's dumb types. */
+		typedef signed char cc_s8l;
+		typedef signed short cc_s16l;
+		typedef signed long cc_s32l;
 
-  typedef unsigned char cc_u8l;
-  typedef unsigned short cc_u16l;
-  typedef unsigned long cc_u32l;
+		typedef unsigned char cc_u8l;
+		typedef unsigned short cc_u16l;
+		typedef unsigned long cc_u32l;
 
-  typedef signed int cc_s8f;
-  typedef signed int cc_s16f;
-  typedef signed long cc_s32f;
+		typedef signed int cc_s8f;
+		typedef signed int cc_s16f;
+		typedef signed long cc_s32f;
 
-  typedef unsigned int cc_u8f;
-  typedef unsigned int cc_u16f;
-  typedef unsigned long cc_u32f;
+		typedef unsigned int cc_u8f;
+		typedef unsigned int cc_u16f;
+		typedef unsigned long cc_u32f;
 
-  #define CC_PRIdLEAST8 "d"
-  #define CC_PRIiLEAST8 "i"
-  #define CC_PRIuLEAST8 "u"
-  #define CC_PRIoLEAST8 "o"
-  #define CC_PRIxLEAST8 "x"
-  #define CC_PRIXLEAST8 "X"
+		#define CC_PRIdLEAST8 "d"
+		#define CC_PRIiLEAST8 "i"
+		#define CC_PRIuLEAST8 "u"
+		#define CC_PRIoLEAST8 "o"
+		#define CC_PRIxLEAST8 "x"
+		#define CC_PRIXLEAST8 "X"
 
-  #define CC_PRIdLEAST16 "d"
-  #define CC_PRIiLEAST16 "i"
-  #define CC_PRIuLEAST16 "u"
-  #define CC_PRIoLEAST16 "o"
-  #define CC_PRIxLEAST16 "x"
-  #define CC_PRIXLEAST16 "X"
+		#define CC_PRIdLEAST16 "d"
+		#define CC_PRIiLEAST16 "i"
+		#define CC_PRIuLEAST16 "u"
+		#define CC_PRIoLEAST16 "o"
+		#define CC_PRIxLEAST16 "x"
+		#define CC_PRIXLEAST16 "X"
 
-  #define CC_PRIdLEAST32 "ld"
-  #define CC_PRIiLEAST32 "li"
-  #define CC_PRIuLEAST32 "lu"
-  #define CC_PRIoLEAST32 "lo"
-  #define CC_PRIxLEAST32 "lx"
-  #define CC_PRIXLEAST32 "lX"
+		#define CC_PRIdLEAST32 "ld"
+		#define CC_PRIiLEAST32 "li"
+		#define CC_PRIuLEAST32 "lu"
+		#define CC_PRIoLEAST32 "lo"
+		#define CC_PRIxLEAST32 "lx"
+		#define CC_PRIXLEAST32 "lX"
 
-  #define CC_PRIdFAST8 "d"
-  #define CC_PRIiFAST8 "i"
-  #define CC_PRIuFAST8 "u"
-  #define CC_PRIoFAST8 "o"
-  #define CC_PRIxFAST8 "x"
-  #define CC_PRIXFAST8 "X"
+		#define CC_PRIdFAST8 "d"
+		#define CC_PRIiFAST8 "i"
+		#define CC_PRIuFAST8 "u"
+		#define CC_PRIoFAST8 "o"
+		#define CC_PRIxFAST8 "x"
+		#define CC_PRIXFAST8 "X"
 
-  #define CC_PRIdFAST16 "d"
-  #define CC_PRIiFAST16 "i"
-  #define CC_PRIuFAST16 "u"
-  #define CC_PRIoFAST16 "o"
-  #define CC_PRIxFAST16 "x"
-  #define CC_PRIXFAST16 "X"
+		#define CC_PRIdFAST16 "d"
+		#define CC_PRIiFAST16 "i"
+		#define CC_PRIuFAST16 "u"
+		#define CC_PRIoFAST16 "o"
+		#define CC_PRIxFAST16 "x"
+		#define CC_PRIXFAST16 "X"
 
-  #define CC_PRIdFAST32 "ld"
-  #define CC_PRIiFAST32 "li"
-  #define CC_PRIuFAST32 "lu"
-  #define CC_PRIoFAST32 "lo"
-  #define CC_PRIxFAST32 "lx"
-  #define CC_PRIXFAST32 "lX"
- #endif /* !CC_USE_C99_INTEGERS */
+		#define CC_PRIdFAST32 "ld"
+		#define CC_PRIiFAST32 "li"
+		#define CC_PRIuFAST32 "lu"
+		#define CC_PRIoFAST32 "lo"
+		#define CC_PRIxFAST32 "lx"
+		#define CC_PRIXFAST32 "lX"
+	#endif /* !CC_USE_C99_INTEGERS */
 
 #endif /* CC_INTEGERS_DEFINED */
 
@@ -133,12 +133,12 @@
 #ifndef CC_BOOLEAN_DEFINED
 #define CC_BOOLEAN_DEFINED
 
- typedef cc_u8l cc_bool;
- enum
- {
+	typedef cc_u8l cc_bool;
+	enum
+	{
 	cc_false = 0,
 	cc_true = 1
- };
+	};
 
 #endif /* CC_BOOLEAN_DEFINED */
 
@@ -192,12 +192,12 @@
 #endif
 
 #ifndef CC_ATTRIBUTE_PRINTF
- /* GCC 3.2 is the earliest version of GCC of which I can find proof of supporting this. */
- #if defined(__GNUC__) && defined(__GNUC_MINOR__) && (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2))
-  #define CC_ATTRIBUTE_PRINTF(a, b) __attribute__((format(printf, a, b)))
- #else
-  #define CC_ATTRIBUTE_PRINTF(a, b)
- #endif
+	/* GCC 3.2 is the earliest version of GCC of which I can find proof of supporting this. */
+	#if defined(__GNUC__) && defined(__GNUC_MINOR__) && (__GNUC__ > 3 || (__GNUC__ == 3 && __GNUC_MINOR__ >= 2))
+		#define CC_ATTRIBUTE_PRINTF(a, b) __attribute__((format(printf, a, b)))
+	#else
+		#define CC_ATTRIBUTE_PRINTF(a, b)
+	#endif
 #endif
 
 #ifndef CC_STRINGIFY
@@ -206,74 +206,74 @@
 #endif
 
 #ifdef __cplusplus
- #ifndef CC_CPLUSPLUS
-  /* MSVC is FUCKING SHIT, setting '__cplusplus' to the wrong value in a direct violation of the C++ standard. */
-  #ifdef _MSVC_LANG
-   #define CC_CPLUSPLUS _MSVC_LANG
-  #else
-   #define CC_CPLUSPLUS __cplusplus
-  #endif
- #endif
+	#ifndef CC_CPLUSPLUS
+		/* MSVC is FUCKING SHIT, setting '__cplusplus' to the wrong value in a direct violation of the C++ standard. */
+		#ifdef _MSVC_LANG
+			#define CC_CPLUSPLUS _MSVC_LANG
+		#else
+			#define CC_CPLUSPLUS __cplusplus
+		#endif
+	#endif
 #endif
 
 #ifndef CC_UNREACHABLE
- #ifdef CC_CPLUSPLUS
-  #include <utility>
- #endif
+	#ifdef CC_CPLUSPLUS
+		#include <utility>
+	#endif
 
- #if defined(__cpp_lib_unreachable) && __cpp_lib_unreachable >= 202202L
-  /* Standard C++23. */
-  #define CC_UNREACHABLE std::unreachable()
- #elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202311L
-  /* Standard C23. */
-  #include <stddef.h>
-  #define CC_UNREACHABLE unreachable()
- #elif defined(_MSC_VER) && _MSC_VER >= 1200 /* VC 6.0 is the oldest version that I have available to test. */
-  /* MSVC. */
-  #define CC_UNREACHABLE __assume(0)
- #elif defined(__GNUC__) && defined(__GNUC_MINOR__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 5))
-  /* GCC. */
-  #define CC_UNREACHABLE __builtin_unreachable()
- #else
-  /* Assert fallback; will resolve to nothing in release builds, but throw an error in debug builds. Better than nothing. */
-  #include <assert.h>
-  #define CC_UNREACHABLE assert(cc_false)
- #endif
+	#if defined(__cpp_lib_unreachable) && __cpp_lib_unreachable >= 202202L
+		/* Standard C++23. */
+		#define CC_UNREACHABLE std::unreachable()
+	#elif defined(__STDC_VERSION__) && __STDC_VERSION__ >= 202311L
+		/* Standard C23. */
+		#include <stddef.h>
+		#define CC_UNREACHABLE unreachable()
+	#elif defined(_MSC_VER) && _MSC_VER >= 1200 /* VC 6.0 is the oldest version that I have available to test. */
+		/* MSVC. */
+		#define CC_UNREACHABLE __assume(0)
+	#elif defined(__GNUC__) && defined(__GNUC_MINOR__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 5))
+		/* GCC. */
+		#define CC_UNREACHABLE __builtin_unreachable()
+	#else
+		/* Assert fallback; will resolve to nothing in release builds, but throw an error in debug builds. Better than nothing. */
+		#include <assert.h>
+		#define CC_UNREACHABLE assert(cc_false)
+	#endif
 #endif
 
 #if defined(CC_CPLUSPLUS) && CC_CPLUSPLUS >= 201703L
- #ifndef CC_VISIT_HELPER
- #define CC_VISIT_HELPER
-  template<typename... Ts>
-  struct CC_VisitHelper : Ts... { using Ts::operator()...; };
+	#ifndef CC_VISIT_HELPER
+	#define CC_VISIT_HELPER
+		template<typename... Ts>
+		struct CC_VisitHelper : Ts... { using Ts::operator()...; };
 
-  /* Deduction guide. */
-  template<typename... Ts>
-  CC_VisitHelper(Ts...) -> CC_VisitHelper<Ts...>;
- #endif
+		/* Deduction guide. */
+		template<typename... Ts>
+		CC_VisitHelper(Ts...) -> CC_VisitHelper<Ts...>;
+	#endif
 
- #ifndef CC_VISIT
- #define CC_VISIT
-  #include <utility>
-  #include <variant>
+	#ifndef CC_VISIT
+	#define CC_VISIT
+		#include <utility>
+		#include <variant>
 
-  template<typename T, typename... Ts>
-  inline auto CC_Visit(T &&variant, Ts &&...visitors)
-  {
-   return std::visit(CC_VisitHelper{std::forward<Ts>(visitors)...}, std::forward<T>(variant));
-  }
- #endif
+		template<typename T, typename... Ts>
+		inline auto CC_Visit(T &&variant, Ts &&...visitors)
+		{
+			return std::visit(CC_VisitHelper{std::forward<Ts>(visitors)...}, std::forward<T>(variant));
+		}
+	#endif
 
- #ifndef CC_VARIANT_HOLDS_ANY_OF
- #define CC_VARIANT_HOLDS_ANY_OF
-  #include <variant>
+	#ifndef CC_VARIANT_HOLDS_ANY_OF
+	#define CC_VARIANT_HOLDS_ANY_OF
+		#include <variant>
 
-  template<typename... Alts, typename... Ts>
-  constexpr bool CC_VariantHoldsAnyOf(const std::variant<Ts...> &variant) noexcept
-  {
-   return (std::holds_alternative<Alts>(variant) || ...);
-  }
- #endif
+		template<typename... Alts, typename... Ts>
+		constexpr bool CC_VariantHoldsAnyOf(const std::variant<Ts...> &variant) noexcept
+		{
+			return (std::holds_alternative<Alts>(variant) || ...);
+		}
+	#endif
 #endif
 
 /* Common constants. */
