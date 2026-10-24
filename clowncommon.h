@@ -252,6 +252,18 @@
   CC_VisitHelper(Ts...) -> CC_VisitHelper<Ts...>;
  #endif
 
+ #ifndef CC_VISIT
+ #define CC_VISIT
+  #include <utility>
+  #include <variant>
+
+  template<typename T, typename... Ts>
+  inline auto CC_Visit(T &&variant, Ts &&...visitors)
+  {
+   return std::visit(CC_VisitHelper{std::forward<Ts>(visitors)...}, std::forward<T>(variant));
+  }
+ #endif
+
  #ifndef CC_VARIANT_HOLDS_ANY_OF
  #define CC_VARIANT_HOLDS_ANY_OF
   #include <variant>
